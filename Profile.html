@@ -1,98 +1,116 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Odwa’s Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-  
-  width:100%;
-    html{
-      background:#FFF4c2;
-      scroll-behavior: smooth;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #edc0bf 0%, #c4caef 100%); /* colorful backdrop */
+      display: flex; flex-direction: column;
     }
-    h1{
-      font-size:3rem;
-    }
-    
-    #welcom-section{
-      height:100%;
-    }
-    
-    #header{
-      display:flex;
-      flex-direction:column;
-      font-family:  sans-serif;
-      height:100vh;
-      width:100%;
-      align-items:center;
-      justify-content:center;
-      background:#e3b778;
-      color:white;
-	  
-    }
-    #projects{
-      display:flex;
-      flex-direction:row;
-      align-items:center;
-      justify-content:center;
-      margin:5rem;
-    }
-    .project-tile{
-      background:#9c6137;
-      height:10rem;
-      width:10rem;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border: 10px solid #9c6137;
-      border-radius:10px;
-      
-    }
-    .project-text{
-      color:white;
-      font-family:  sans-serif;
-	  text-decoration: none;
-	  ho
-      
-    }
-	.project-text:hover{
-	  color: #ffff23;
-	}
-    #navbar{
-	
-	  align-items: center;
-      display:flex;
-      position:fixed;
-      top:0px;
-      left:0px;
-      background:#9c6137;
-      width:100%;
-      height:2rem;
-      margin-right: 2rem;
-      box-shadow:0 2px 2px rgba(0, 0, 0, 0.4);
-      justify-content:space-around;
-	  
-    }
-    
-  </style>
 
-  <section id="welcom-section">
-    
-    <header id="header">
-      
-      <h1>Welcom I am Odwa</h1>
-      <p>Currently certified web developer</p>
+    nav {
+      position: sticky; top:0;
+      background: rgba(156,97,55,0.9);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a { color: white; text-decoration: none; font-weight: 600; }
+
+    header {
+      padding: 4rem 1rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    .grid {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      color: #333;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: rgba(156,97,55,0.8);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .card a:hover { background: rgba(156,97,55,1); }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <section>
+    <header>
+      <h1>Welcome, I'm Odwa Mbenyane</h1>
+      <p>Certified Web Developer | Building sleek, modern experiences</p>
     </header>
+  </section>
+
+  <section id="projects" class="grid">
+    <div class="card">
+      <h3>Survey Form</h3>
+      <p>A clean CodePen project form with validation and responsive layout.</p>
+      <a href="https://codepen.io/Mzingisi12/pen/mdMgzpv" target="_blank">View on CodePen</a>
+    </div>
+    <div class="card">
+      <h3>LinkedIn Profile</h3>
+      <p>Connect with me professionally on LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/odwa-mbenyane-3210b8205" target="_blank">Visit LinkedIn</a>
+    </div>
+	<div class="card">
+	  <h3>GitHub</h3>
+	  <p>View my past and current projects at GitHub</p>
+	  <a href="https://github.com/Odwa2003" target="_blank">Vist GitHub</a>
+	</div>
+	<div class="card">
+	  <h3>Responsive Web Design Certification</h3>
+	  <p>View my Web Design Certification that took 300 hours to get</p>
+	  <a href="https://www.freecodecamp.org/certification/fcc999983d9-8dba-4550-a1e5-3abf086f4d1a/responsive-web-design" target="_blank">View Web Design Certification</a>
+  </section>
  
-  </section>
-  
-  <section id=projects>
-    
-    <div class="project-tile">
-      <a target=_blank class=project-text href="https://codepen.io/Mzingisi12/pen/mdMgzpv"> Survay Form</a>
-    <div>
-      
-  </section>
-  <section id=navbar>
-    
-      <a class=project-text href=#header>About</a>
-      <a class=project-text href=#projects>Projects</a>
-    
-  </section>
+
+</body>
 </html>
